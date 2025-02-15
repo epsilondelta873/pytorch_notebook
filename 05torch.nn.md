@@ -322,27 +322,6 @@ for data in dataloader:
 
 ## 反向传播与优化器
 
-训练一个神经网络的大致代码架构为：
-
-```text
-提取数据:dataset提取外部数据,dataloader将dataset中的数据随机分批
-
-定义神经网络模型(nn.Module)
-    初始化
-    前向传播
-
-初始化模型
-初始化损失函数
-初始化优化器
-
-分epoch分batch遍历数据(dataloader)
-    把数据喂给模型
-    计算损失(nn.Loss)
-    之前的梯度清0(optim.zero_grad)
-    反向传播求梯度(loss.backward)
-    更新权重(optim.step)
-```
-
 初始化优化器时需要设定使用的方法(SGD/Adam)，模型参数(模型名称.parameters())，以及学习率lr
 
 提供一个简单的示例
