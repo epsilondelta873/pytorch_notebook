@@ -1,3 +1,3 @@
 用来存放学习pytorch使用到的代码
 
-目前是小土堆pytorch
+小土堆pytorch笔记(已完结)
