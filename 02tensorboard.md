@@ -4,12 +4,18 @@
 
 需要先写入内容再打开Tensorboard
 
-```conda
+```shell
 #in conda terminal
 #安装
 pip install tensorboard
 
-#打开tensorboard logs文件夹需要本地创建,且最好使用logs的绝对地址
+#激活pytorch环境
+conda activate pytorch
+
+#进入工作路径
+cd some_path
+
+#打开tensorboard
 tensorboard --logdir=logs #ctrl+c退出
 
 #修改端口地址
@@ -30,7 +36,7 @@ add_scalar()用于记录标量数据（如损失值、准确率、学习率等�
 #导入类
 from torch.utils.tensorboard import SummaryWriter
 #创建类
-writer = SummaryWriter('logs') #logs为存放日志的文件夹,需自行创建
+writer = SummaryWriter('logs') #logs为存放日志的文件夹,这样写就自动创建在工作路径中
 
 """
 add_scalar参数介绍:
